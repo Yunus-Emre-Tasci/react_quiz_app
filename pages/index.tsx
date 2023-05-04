@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@700&family=Fascinate+Inline&display=swap" rel="stylesheet"/>
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
+      <main>
              <h1>Quiz App</h1>
       </main>
     </>
