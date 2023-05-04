@@ -1,23 +1,26 @@
 import QuestionCard from "@/components/QuestionCarddeneme2";
 import Head from "next/head"
 import { useState } from "react";
+import {Difficulty, fetchQuizQuestions} from "../API"
 
+const TOTAL_QUESTIONS=10
 
 export default function Home() {
 
 const [loading, setLoading] = useState(false)
 const [questions, setQuestions] = useState([])
 const [number, setNumber] = useState(0)
+const [userAnswers, setUserAnswers] = useState([]);
+const [gameOver, setGameOver] = useState(true)
+const [score, setScore] = useState(0)
 
-  const startTrivia=async()=>{
+console.log(fetchQuizQuestions(10,Difficulty.EASY));
 
-  }
+  const startTrivia=async()=>{}
 
-  const chechAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {};
+  const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {};
 
-  const nextQuestion=()=>{
-
-  }
+  const nextQuestion=()=>{}
 
   return (
     <>
@@ -28,13 +31,24 @@ const [number, setNumber] = useState(0)
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="App">
-             <h1>REACT QUIZ</h1>
-             <button className="start" onClick={startTrivia}>Start</button>
-             <p className="Score">Score: </p>
-             <p>Loading Questions..</p>
-             <QuestionCard/>
-             <button className="next" onClick={nextQuestion}>Next Question</button>
+        <h1>REACT QUIZ</h1>
+        <button className="start" onClick={startTrivia}>
+          Start
+        </button>
+        <p className="Score">Score: </p>
+        <p>Loading Questions..</p>
+        {/* <QuestionCard
+          answers={questions[number].answers}
+          callback={checkAnswer}
+          question={questions[number].question}
+          questionNumber={number + 1}
+          totalQuestion={TOTAL_QUESTIONS}
+          userAnswer={userAnswers ? userAnswers[number] : undefined}
+        /> */}
+        <button className="next" onClick={nextQuestion}>
+          Next Question
+        </button>
       </main>
     </>
-  )
+  );
 }
