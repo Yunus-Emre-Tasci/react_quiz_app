@@ -1,8 +1,13 @@
 import QuestionCard from "@/components/QuestionCarddeneme2";
 import Head from "next/head"
+import { useState } from "react";
 
 
 export default function Home() {
+
+const [loading, setLoading] = useState(false)
+const [questions, setQuestions] = useState([])
+const [number, setNumber] = useState(0)
 
   const startTrivia=async()=>{
 
