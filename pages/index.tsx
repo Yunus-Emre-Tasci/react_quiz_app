@@ -2,6 +2,7 @@ import QuestionCard from "@/components/QuestionCarddeneme2";
 import Head from "next/head"
 import { useState } from "react";
 import {Difficulty, fetchQuizQuestions,QuestionState} from "../API"
+import {GlobalStyle} from "../styles/page.styles"
 
 const TOTAL_QUESTIONS=10
 
@@ -79,6 +80,7 @@ console.log(questions);
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <GlobalStyle/>
       <main className="App">
         <h1>REACT QUIZ</h1>
         {(gameOver || userAnswers.length === TOTAL_QUESTIONS) && (
