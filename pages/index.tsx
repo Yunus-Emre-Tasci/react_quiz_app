@@ -32,6 +32,9 @@ console.log(questions);
     const newQuestions=await fetchQuizQuestions(TOTAL_QUESTIONS,Difficulty.EASY)
 
     setQuestions(newQuestions)
+    setNumber(0)
+    setUserAnswers([])
+    setScore(0)
     
     setLoading(false)
   }
