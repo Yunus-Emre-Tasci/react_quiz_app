@@ -1,6 +1,6 @@
 import { shuffleArray } from "./utils";
 
-export type Question = {
+export type Question = {  // apiden gelen veri
   category: string;
   correct_answer: string;
   difficulty: string;
@@ -21,7 +21,7 @@ export const fetchQuizQuestions = async (
   amount: number,
   difficulty: Difficulty
 ) => {
-  const endpoint = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&type=multiple`;
+  const endpoint = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}`;
 
   const data = await (await fetch(endpoint)).json();
   // console.log(data.results);
