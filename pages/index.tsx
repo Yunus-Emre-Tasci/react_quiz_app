@@ -2,7 +2,7 @@ import QuestionCard from "@/components/QuestionCarddeneme2";
 import Head from "next/head"
 import { useState } from "react";
 import {Difficulty, fetchQuizQuestions,QuestionState} from "../API"
-import {GlobalStyle} from "../styles/page.styles"
+import {GlobalStyle, Wrapper} from "../styles/page.styles"
 
 const TOTAL_QUESTIONS=10
 
@@ -81,7 +81,7 @@ console.log(questions);
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <GlobalStyle/>
-      <main className="App">
+      <Wrapper className="App">
         <h1>REACT QUIZ</h1>
         {(gameOver || userAnswers.length === TOTAL_QUESTIONS) && (
           <button className="start" onClick={startTrivia}>
@@ -105,7 +105,7 @@ console.log(questions);
             Next Question
           </button>
         )}
-      </main>
+      </Wrapper>
     </>
   );
 }
