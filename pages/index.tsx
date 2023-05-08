@@ -87,9 +87,20 @@ console.log(questions);
         <GlobalStyle />
         <Wrapper>
           <h1>REACT QUIZ</h1>
-          {(gameOver || userAnswers.length === TOTAL_QUESTIONS) && (
+          {/* {(gameOver || userAnswers.length === TOTAL_QUESTIONS) && (
             <button className="start" onClick={startTrivia}>
               Start
+            </button>
+          )} */}
+          {(gameOver) && (
+            <button className="start" onClick={startTrivia}>
+              Start
+            </button>
+          )}
+          {(
+            (userAnswers.length === TOTAL_QUESTIONS)) && (
+            <button className="start" onClick={startTrivia}>
+              Restart
             </button>
           )}
           {!gameOver && <p className="Score">Score: {score} </p>}
