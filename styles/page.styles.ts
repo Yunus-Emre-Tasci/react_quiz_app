@@ -16,7 +16,7 @@ body{
 *{
     box-sizing: border-box;
     margin: 0;
-    padding: 0 20px;
+    padding: 0;
     font-family: 'Catamaran', sans-serif;
 }
 `;

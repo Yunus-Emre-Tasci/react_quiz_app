@@ -86,7 +86,7 @@ console.log(questions);
       <>
         <GlobalStyle/>
         <div className="wrapper">
-          <h1>REACT QUIZ</h1>
+          <h1 className="title">REACT QUIZ</h1>
           {/* {(gameOver || userAnswers.length === TOTAL_QUESTIONS) && (
             <button className="start" onClick={startTrivia}>
               Start

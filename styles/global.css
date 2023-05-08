@@ -2,7 +2,6 @@
   display: flex;
 flex-direction: column;
 align-items: center;
-/* margin: 15% auto auto auto; */
 }
 .wrapper p{
   color: black;
@@ -12,9 +11,10 @@ align-items: center;
     color: #fff;
     font-size: 2rem;
     margin: 0;
+    background-color: #ffffff86;
   }
 
-  h1 {
+.title {
     font-family: "Fascinate Inline", cursive;
     background-image: linear-gradient (180deg, #fff, #87f1ff);
     font-weight: 400;
