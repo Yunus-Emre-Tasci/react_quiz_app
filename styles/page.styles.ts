@@ -25,6 +25,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 15% auto auto auto;
 
   > p {
     color: #fff;
@@ -37,7 +38,7 @@ export const Wrapper = styled.div`
   }
 
   h1 {
-    font-family: Fascinate Inline;
+    font-family: "Fascinate Inline", cursive;
     background-image: linear-gradient (180deg, #fff, #87f1ff);
     font-weight: 400;
     background-size: 100%;

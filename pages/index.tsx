@@ -84,7 +84,7 @@ console.log(questions);
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <>
-        <GlobalStyle />
+        <GlobalStyle/>
         <Wrapper>
           <h1>REACT QUIZ</h1>
           {/* {(gameOver || userAnswers.length === TOTAL_QUESTIONS) && (
@@ -124,7 +124,7 @@ console.log(questions);
               </button>
             )}
         </Wrapper>
-      </>
+        </>
     </>
   );
 }
