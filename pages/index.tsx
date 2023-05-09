@@ -1,8 +1,8 @@
 import QuestionCard from "@/components/QuestionCarddeneme2";
 import Head from "next/head"
 import { useState } from "react";
-import {Difficulty, fetchQuizQuestions,QuestionState} from "../API"
-import {GlobalStyle, WrapperMain} from "../styles/page.styles"
+import {fetchQuizQuestions,QuestionsState} from "../API"
+import {GlobalStyle} from "../styles/page.styles"
 
 const TOTAL_QUESTIONS=10
 
@@ -16,7 +16,7 @@ export type AnswerObject={
 export default function Home() {
 
 const [loading, setLoading] = useState(false)
-const [questions, setQuestions] = useState < QuestionState[]>([]);
+const [questions, setQuestions] = useState < QuestionsState[]>([]);
 const [number, setNumber] = useState(0)
 const [userAnswers, setUserAnswers] = useState <AnswerObject[]>([]);
 const [gameOver, setGameOver] = useState(true)
