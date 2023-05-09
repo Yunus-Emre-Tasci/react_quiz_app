@@ -9,10 +9,22 @@ align-items: center;
 
 .score {
     color: #fff;
-    font-size: 2rem;
-    margin: 0;
-    background-color: #ffffff86;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin:20px 0;
+    padding: 10px 30px;
+    border-radius: 5px;
+    /* width: 100px; */
+    background-color: #ffffffc4;
   }
+
+.titleBg{
+  margin-top: 5px;
+  padding: 10px 30px;
+  background-color:
+#ffffffc4;
+border-radius: 5px;
+}  
 
 .title {
     font-family: "Fascinate Inline", cursive;
@@ -21,7 +33,7 @@ align-items: center;
     background-size: 100%;
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /* -webkit-text-fill-color: transparent; */
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     filter: drop-shadow(2px 2px #0085a3);
@@ -46,3 +58,9 @@ align-items: center;
 .start {
     max-width: 200px;
   }
+
+@media screen and (max-width: 450px) {
+  .title {
+    font-size: 40px;
+  }
+}  

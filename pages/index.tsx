@@ -84,26 +84,27 @@ console.log(questions);
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <>
-        <GlobalStyle/>
+        <GlobalStyle />
         <div className="wrapper">
-          <h1 className="title">REACT QUIZ</h1>
+          <div className="titleBg">
+            <h1 className="title">REACT QUIZ</h1>
+          </div>
           {/* {(gameOver || userAnswers.length === TOTAL_QUESTIONS) && (
             <button className="start" onClick={startTrivia}>
               Start
             </button>
           )} */}
-          {(gameOver) && (
+          {gameOver && (
             <button className="start" onClick={startTrivia}>
               Start
             </button>
           )}
-          {(
-            (userAnswers.length === TOTAL_QUESTIONS)) && (
+          {userAnswers.length === TOTAL_QUESTIONS && (
             <button className="start" onClick={startTrivia}>
               Restart
             </button>
           )}
-          {!gameOver && <p className="Score">Score: {score} </p>}
+          {!gameOver && <p className="score">Score: {score} </p>}
           {loading && <p>Loading Questions..</p>}
           {!loading && !gameOver && (
             <QuestionCard
@@ -124,7 +125,7 @@ console.log(questions);
               </button>
             )}
         </div>
-        </>
+      </>
     </>
   );
 }
