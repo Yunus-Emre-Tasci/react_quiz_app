@@ -11,15 +11,15 @@ export type Question = {  // apiden gelen veri
 
 export type QuestionState = Question & { answers: string[] };
 
-export enum Difficulty {
-  EASY = "easy",
-  MEDIUM = "medium",
-  HARD = "hard",
-}
+// export enum Difficulty {
+//   EASY = "easy",
+//   MEDIUM = "medium",
+//   HARD = "hard",
+// }
 
 export const fetchQuizQuestions = async (
   amount: number,
-  difficulty: Difficulty
+  difficulty: string
 ) => {
   const endpoint = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}`;
 

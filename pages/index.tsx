@@ -21,19 +21,22 @@ const [number, setNumber] = useState(0)
 const [userAnswers, setUserAnswers] = useState <AnswerObject[]>([]);
 const [gameOver, setGameOver] = useState(true)
 const [score, setScore] = useState(0)
+const [difficulty, setDifficulty] = useState("easy")
 // 
 // console.log(fetchQuizQuestions(10,Difficulty.EASY));
 
 console.log(questions);
 
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>):void => {
+    const selectedDifficulty = e.target.value;
+    setDifficulty(selectedDifficulty);
+  };
+
   const startTrivia=async()=>{
     setLoading(true);
     setGameOver(false); //çünkü yeni bir oyuna başlıyoruz.
 
-    const newQuestions = await fetchQuizQuestions(
-      TOTAL_QUESTIONS,
-      Difficulty.EASY
-    );
+    const newQuestions = await fetchQuizQuestions(TOTAL_QUESTIONS, difficulty);
 
     setQuestions(newQuestions);
     setNumber(0); // soru çekildikten sonra sıfırlama işlemlerini yapıyoruz
@@ -95,9 +98,19 @@ console.log(questions);
             </button>
           )} */}
           {gameOver && (
-            <button className="start" onClick={startTrivia}>
-              Start
-            </button>
+            <>
+              <div className="difficulty">
+                <label htmlFor="difficulty">Choose a difficulty</label>
+                <select name="difficulty" id="difficulty" onChange={handleChange}>
+                  <option value="easy">Easy</option>
+                  <option value="medium">Medium</option>
+                  <option value="hard">Hard</option>
+                </select>
+              </div>
+              <button className="start" onClick={startTrivia}>
+                Start
+              </button>
+            </>
           )}
           {userAnswers.length === TOTAL_QUESTIONS && (
             <button className="start" onClick={startTrivia}>
