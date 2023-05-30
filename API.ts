@@ -47,10 +47,10 @@ export const fetchQuizQuestions = async (
       question.correct_answer,
     ]),
 
-    ...question,
-    question: displayNames.of(question.question),
-    answers: shuffleArray([...question.incorrect_answers, question.correct_answer].map((answer) => {    //1.  4 satır
-      return displayNames.of(answer);
+    // ...question,
+    // question: displayNames.of(question.question),
+    // answers: shuffleArray([...question.incorrect_answers, question.correct_answer].map((answer) => {    //1.  4 satır
+    //   return displayNames.of(answer);
 
     
     
@@ -70,7 +70,7 @@ export const fetchQuizQuestions = async (
     //   answers: translatedAnswers,
     // };
     
-  }))   //6. 73-74
+   //6. 73-74
 }))
   // const questions = data.results;
   // const turkishQuestions = questions.map((q: Question) => {
