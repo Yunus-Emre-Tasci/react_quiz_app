@@ -92,11 +92,6 @@ console.log(questions);
           <div className="titleBg">
             <h1 className="title">REACT QUIZ</h1>
           </div>
-          {/* {(gameOver || userAnswers.length === TOTAL_QUESTIONS) && (
-            <button className="start" onClick={startTrivia}>
-              Start
-            </button>
-          )} */}
           {gameOver && (
             <>
               <div className="difficulty">
