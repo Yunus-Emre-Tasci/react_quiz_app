@@ -9,11 +9,17 @@ type Props = {
   userAnswer: AnswerObject | undefined;
   questionNumber: number;
   totalQuestion: number;
+  number: number;
+  TOTAL_QUESTIONS: number;
 };
 
-const QuestionCard:React.FC<Props> = ({answers,callback,question,questionNumber,totalQuestion,userAnswer}) => {
+const QuestionCard:React.FC<Props> = ({answers,callback,question,questionNumber,totalQuestion,userAnswer,number,TOTAL_QUESTIONS}) => {
   return (
-    <Wrapper>
+    {
+      true? (
+        <h2>bitti</h2>
+      ):(
+        <Wrapper>
       <p className="number">
         Question: {questionNumber} / {totalQuestion}
       </p>
@@ -36,6 +42,8 @@ const QuestionCard:React.FC<Props> = ({answers,callback,question,questionNumber,
         ))}
       </div>
     </Wrapper>
+      )
+    }
   );
 }
 

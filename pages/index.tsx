@@ -96,7 +96,11 @@ console.log(questions);
             <>
               <div className="difficulty">
                 <label htmlFor="difficulty">Choose a difficulty</label>
-                <select name="difficulty" id="difficulty" onChange={handleChange}>
+                <select
+                  name="difficulty"
+                  id="difficulty"
+                  onChange={handleChange}
+                >
                   <option value="easy">Easy</option>
                   <option value="medium">Medium</option>
                   <option value="hard">Hard</option>
@@ -122,6 +126,8 @@ console.log(questions);
               questionNumber={number + 1}
               totalQuestion={TOTAL_QUESTIONS}
               userAnswer={userAnswers ? userAnswers[number] : undefined}
+              number={number}
+              TOTAL_QUESTIONS={TOTAL_QUESTIONS}
             />
           )}
           {!loading &&
