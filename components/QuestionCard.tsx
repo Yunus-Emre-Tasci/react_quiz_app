@@ -11,6 +11,8 @@ type Props = {
   totalQuestion: number;
   number: number;
   TOTAL_QUESTIONS: number;
+  userAnswers: AnswerObject | undefined;
+  score: number;
 };
 
 const QuestionCard: React.FC<Props> = ({
@@ -22,11 +24,21 @@ const QuestionCard: React.FC<Props> = ({
   userAnswer,
   number,
   TOTAL_QUESTIONS,
+  userAnswers,
+  score,
 }) => {
   return (
     <>
-      {userAnswer?.length === TOTAL_QUESTIONS ? (
-        <h3>selam</h3>
+      {userAnswers?.length === TOTAL_QUESTIONS ? (
+        <Wrapper>
+          {score > 7 ? (
+            <h2>Good Score!</h2>
+          ) : score < 4 ? (
+            <h2>Bad Score!</h2>
+          ) : (
+            <h2>You need some more work!</h2>
+          )}
+        </Wrapper>
       ) : (
         <Wrapper>
           <p className="number">
