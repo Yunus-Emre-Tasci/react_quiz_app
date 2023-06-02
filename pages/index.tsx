@@ -6,12 +6,13 @@ import {GlobalStyle} from "../styles/page.styles"
 
 const TOTAL_QUESTIONS=10
 
-export type AnswerObject={
-  question:string
-  answer:string
-  correct:boolean
-  correctAnswer:string
-}
+export type AnswerObject = {
+  question: string;
+  answer: string;
+  correct: boolean;
+  correctAnswer: string;
+  length: number;
+};
 
 export default function Home() {
 
