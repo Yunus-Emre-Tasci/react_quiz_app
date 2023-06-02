@@ -13,38 +13,70 @@ type Props = {
   TOTAL_QUESTIONS: number;
 };
 
-const QuestionCard:React.FC<Props> = ({answers,callback,question,questionNumber,totalQuestion,userAnswer,number,TOTAL_QUESTIONS}) => {
+const QuestionCard: React.FC<Props> = ({
+  answers,
+  callback,
+  question,
+  questionNumber,
+  totalQuestion,
+  userAnswer,
+  number,
+  TOTAL_QUESTIONS,
+}) => {
   return (
-    {
-      true? (
-        <h2>bitti</h2>
-      ):(
+    <>
+      {userAnswer?.length === TOTAL_QUESTIONS ? (
+        <h3>selam</h3>
+      ) : (
         <Wrapper>
-      <p className="number">
-        Question: {questionNumber} / {totalQuestion}
-      </p>
-      <p dangerouslySetInnerHTML={{ __html: question }} />
-      <div>
-        {answers?.map((answer) => (
-          <ButtonWrapper
-            correct={userAnswer?.correctAnswer === answer}
-            userClicked={userAnswer?.answer === answer}
-            key={answer}
-          >
-            <button
-              disabled={userAnswer ? true : false}
-              value={answer}
-              onClick={callback}
-            >
-              <span dangerouslySetInnerHTML={{ __html: answer }} />
-            </button>
-          </ButtonWrapper>
-        ))}
-      </div>
-    </Wrapper>
-      )
-    }
+          <p className="number">
+            Question: {questionNumber} / {totalQuestion}
+          </p>
+          <p dangerouslySetInnerHTML={{ __html: question }} />
+          <div>
+            {answers?.map((answer) => (
+              <ButtonWrapper
+                correct={userAnswer?.correctAnswer === answer}
+                userClicked={userAnswer?.answer === answer}
+                key={answer}
+              >
+                <button
+                  disabled={userAnswer ? true : false}
+                  value={answer}
+                  onClick={callback}
+                >
+                  <span dangerouslySetInnerHTML={{ __html: answer }} />
+                </button>
+              </ButtonWrapper>
+            ))}
+          </div>
+        </Wrapper>
+      )}
+    </>
+    // <Wrapper>
+    //   <p className="number">
+    //     Question: {questionNumber} / {totalQuestion}
+    //   </p>
+    //   <p dangerouslySetInnerHTML={{ __html: question }} />
+    //   <div>
+    //     {answers?.map((answer) => (
+    //       <ButtonWrapper
+    //         correct={userAnswer?.correctAnswer === answer}
+    //         userClicked={userAnswer?.answer === answer}
+    //         key={answer}
+    //       >
+    //         <button
+    //           disabled={userAnswer ? true : false}
+    //           value={answer}
+    //           onClick={callback}
+    //         >
+    //           <span dangerouslySetInnerHTML={{ __html: answer }} />
+    //         </button>
+    //       </ButtonWrapper>
+    //     ))}
+    //   </div>
+    // </Wrapper>
   );
-}
+};
 
 export default QuestionCard
