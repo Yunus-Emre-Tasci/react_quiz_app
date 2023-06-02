@@ -57,10 +57,11 @@ console.log(questions);
       correct&&setScore((prev)=>prev+1)
 
       const answerObject: AnswerObject = {
-         question:questions[number].question,
-         answer:answer,
-         correct:correct,
-         correctAnswer:questions[number].correct_answer
+        question: questions[number].question,
+        answer: answer,
+        correct: correct,
+        correctAnswer: questions[number].correct_answer,
+        length: questions.length,
       };
 
       setUserAnswers((prev) => [...prev, answerObject]);
