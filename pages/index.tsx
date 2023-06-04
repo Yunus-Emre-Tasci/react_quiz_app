@@ -130,7 +130,7 @@ console.log(questions);
               userAnswer={userAnswers ? userAnswers[number] : undefined}
               number={number}
               TOTAL_QUESTIONS={TOTAL_QUESTIONS}
-              userAnswers={userAnswers ? userAnswers : undefined}
+              userAnswers={userAnswers}
               score={score}
             />
           )}

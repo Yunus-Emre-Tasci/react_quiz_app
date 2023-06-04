@@ -11,7 +11,7 @@ type Props = {
   totalQuestion: number;
   number: number;
   TOTAL_QUESTIONS: number;
-  userAnswers: AnswerObject | undefined;
+  userAnswers: AnswerObject[] | undefined;
   score: number;
 };
 
