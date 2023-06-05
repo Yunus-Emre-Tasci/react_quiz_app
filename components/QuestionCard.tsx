@@ -1,6 +1,7 @@
 import { AnswerObject } from '@/pagesdeneme2';
 import React from 'react'
 import { ButtonWrapper, Wrapper } from './QuestionCard.styles';
+import Link from 'next/link';
 
 type Props = {
   question: string;
@@ -31,13 +32,20 @@ const QuestionCard: React.FC<Props> = ({
     <>
       {userAnswers?.length === TOTAL_QUESTIONS ? (
         <Wrapper>
-          {score > 7 ? (
-            <h2>Good Score!</h2>
-          ) : score < 4 ? (
-            <h2>Bad Score!</h2>
-          ) : (
-            <h2>You need some more work!</h2>
-          )}
+          <div className="">
+            <span>
+              {score > 7 ? (
+                <h2>Good Score!</h2>
+              ) : score < 4 ? (
+                <h2>Bad Score!</h2>
+              ) : (
+                <h2>You need some more work!</h2>
+              )}
+            </span>
+            <Link href="answers">
+              <button>Show My Answers</button>
+            </Link>
+          </div>
         </Wrapper>
       ) : (
         <Wrapper>
