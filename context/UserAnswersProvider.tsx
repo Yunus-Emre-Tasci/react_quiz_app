@@ -1,8 +1,9 @@
-import React, { createContext, useState, ReactNode } from "react";
+import { createContext, useState, ReactNode } from "react";
+import {AnswerObject} from "../type"
 
 type UserAnswersContextType = {
-  userAnswers: any[]; // userAnswers veri yapısını burada belirtmelisiniz
-  setUserAnswers: React.Dispatch<React.SetStateAction<any[]>>; // setUserAnswers fonksiyonunun türünü belirtmelisiniz
+  userAnswers: AnswerObject[];
+  setUserAnswers: React.Dispatch<React.SetStateAction<AnswerObject[]>>;
 };
 
 export const UserAnswersContext = createContext<UserAnswersContextType>({
@@ -15,7 +16,7 @@ type UserAnswersProviderProps = {
 };
 
 const UserAnswersProvider = ({ children }: UserAnswersProviderProps) => {
-  const [userAnswers, setUserAnswers] = useState<any[]>([]);
+  const [userAnswers, setUserAnswers] = useState<AnswerObject[]>([]);
 
   return (
     <UserAnswersContext.Provider value={{ userAnswers, setUserAnswers }}>

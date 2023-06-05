@@ -2,30 +2,35 @@ import QuestionCard from "@/components/QuestionCarddeneme2";
 import Head from "next/head"
 import { useState } from "react";
 import {fetchQuizQuestions,QuestionState} from "../API"
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
+import { useContext } from "react";
+import {UserAnswersContext} from "../context/UserAnswersProvider"
+import { AnswerObject } from "@/typedeneme2";
 
 const TOTAL_QUESTIONS=10
 
-export type AnswerObject = {
-  question: string;
-  answer: string;
-  correct: boolean;
-  correctAnswer: string;
-  length: number;
-};
+// export type AnswerObject = {
+  // question: string;
+  // answer: string;
+  // correct: boolean;
+  // correctAnswer: string;
+  // length: number;
+// };
 
 export default function Home() {
+
+const { userAnswers, setUserAnswers } = useContext(UserAnswersContext);
 
 const [loading, setLoading] = useState(false)
 const [questions, setQuestions] = useState < QuestionState[]>([]);
 const [number, setNumber] = useState(0)
-const [userAnswers, setUserAnswers] = useState <AnswerObject[]>([]);
+// const [userAnswers, setUserAnswers] = useState <AnswerObject[]>([]);
 const [gameOver, setGameOver] = useState(true)
 const [score, setScore] = useState(0)
 const [difficulty, setDifficulty] = useState("easy")
 
-const router = useRouter();
-router.push(`/answers/${encodeURIComponent(JSON.stringify(userAnswers))}`);
+// const router = useRouter();
+// router.push(`/answers/${encodeURIComponent(JSON.stringify(userAnswers))}`);
 
 // 
 // console.log(fetchQuizQuestions(10,Difficulty.EASY));
@@ -93,7 +98,6 @@ console.log(questions);
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <>
-        
         <div className="wrapper">
           <div className="titleBg">
             <h1 className="title">REACT QUIZ</h1>

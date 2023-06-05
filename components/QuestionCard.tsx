@@ -1,4 +1,4 @@
-import { AnswerObject } from '@/pagesdeneme2';
+import { AnswerObject } from '../type';
 import React from 'react'
 import { ButtonWrapper, Wrapper } from './QuestionCard.styles';
 import Link from 'next/link';
