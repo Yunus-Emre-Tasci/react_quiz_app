@@ -89,7 +89,7 @@ console.log(questions);
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <>
-        <GlobalStyle />
+        
         <div className="wrapper">
           <div className="titleBg">
             <h1 className="title">REACT QUIZ</h1>
