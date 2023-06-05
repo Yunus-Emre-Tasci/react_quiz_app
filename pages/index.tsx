@@ -2,7 +2,7 @@ import QuestionCard from "@/components/QuestionCarddeneme2";
 import Head from "next/head"
 import { useState } from "react";
 import {fetchQuizQuestions,QuestionState} from "../API"
-import {GlobalStyle} from "../styles/page.styles"
+import { useRouter } from "next/router";
 
 const TOTAL_QUESTIONS=10
 
@@ -23,6 +23,10 @@ const [userAnswers, setUserAnswers] = useState <AnswerObject[]>([]);
 const [gameOver, setGameOver] = useState(true)
 const [score, setScore] = useState(0)
 const [difficulty, setDifficulty] = useState("easy")
+
+const router = useRouter();
+router.push(`/answers/${encodeURIComponent(JSON.stringify(userAnswers))}`);
+
 // 
 // console.log(fetchQuizQuestions(10,Difficulty.EASY));
 
