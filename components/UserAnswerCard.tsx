@@ -1,9 +1,13 @@
-import React from 'react'
+import { useContext } from "react";
+import { UserAnswersContext } from "../context/UserAnswersProvider";
 
 const UserAnswerCard = () => {
-  return (
-    <div>UserAnswerCard</div>
-  )
-}
 
-export default UserAnswerCard
+    const { userAnswers } = useContext(UserAnswersContext);
+
+    console.log(userAnswers);
+
+  return <div>UserAnswerCard</div>;
+};
+
+export default UserAnswerCard;

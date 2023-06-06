@@ -35,7 +35,7 @@ const [difficulty, setDifficulty] = useState("easy")
 // 
 // console.log(fetchQuizQuestions(10,Difficulty.EASY));
 
-console.log(questions);
+// console.log(questions);
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>):void => {
     const selectedDifficulty = e.target.value;

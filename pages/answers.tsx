@@ -1,15 +1,16 @@
-import { useContext } from "react";
-import {UserAnswersContext } from "../context/UserAnswersProvider"
+// import { useContext } from "react";
+// import {UserAnswersContext } from "../context/UserAnswersProvider"
 import Head from "next/head";
+import UserAnswerCard from "@/components/UserAnswerCarddeneme2";
 // import { useRouter } from "next/router";
 
 const Answers = () => {
-  const { userAnswers } = useContext(UserAnswersContext);
+  // const { userAnswers } = useContext(UserAnswersContext);
   // const router = useRouter();
   // const { query } = router;
 
   // console.log(query);
-  console.log(userAnswers);
+  // console.log(userAnswers);
 
   return (
     <>
@@ -20,7 +21,7 @@ const Answers = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <h2>Answers</h2>
+        <UserAnswerCard/>
       </div>
     </>
   );
