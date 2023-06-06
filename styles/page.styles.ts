@@ -2,17 +2,16 @@ import {createGlobalStyle} from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
 html{
-    height: 100%;
+    min-height: 100vh;
 }
 body{
-    background-image: url('https://picsum.photos/1400/750');
+    background-image: url('https://picsum.photos/1440/750'); 
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
-    height: 100vh;
-    /* min-height: 100%; */
+    min-height: 100vh;
 }
 
 *{

@@ -6,8 +6,8 @@ flex-wrap: wrap;
 gap: 10px;
 justify-content: center;
 align-items: center;
-margin-top: 40px;
-height: 100vh;
+padding-top: 40px;
+height: 100%;
 /* min-height: 100vh; */
 `
 

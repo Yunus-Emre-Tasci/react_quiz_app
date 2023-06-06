@@ -78,4 +78,7 @@ border-radius: 5px;
     font-size: 40px;
   }
 }  
-
+.answerPage{
+  height: 100%;
+  /* background: linear-gradient(90deg, #d5c5b9,#b9c9d5); */
+}
