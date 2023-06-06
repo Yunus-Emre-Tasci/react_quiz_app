@@ -11,6 +11,8 @@ body{
     background-position: center;
     display: flex;
     justify-content: center;
+    height: 100vh;
+    /* min-height: 100%; */
 }
 
 *{

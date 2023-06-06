@@ -7,12 +7,14 @@ gap: 10px;
 justify-content: center;
 align-items: center;
 margin-top: 40px;
+height: 100vh;
+/* min-height: 100vh; */
 `
 
 export const Wrapper = styled.div`
   /* max-width: 1100px; */
   height: 300px;
-  width: 20%;
+  width: 250px;
   background: #ebfeff;
   border-radius: 10px;
   border: 2px solid #0085a3;
