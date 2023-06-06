@@ -1,16 +1,7 @@
-// import { useContext } from "react";
-// import {UserAnswersContext } from "../context/UserAnswersProvider"
 import Head from "next/head";
 import UserAnswerCard from "@/components/UserAnswerCarddeneme2";
-// import { useRouter } from "next/router";
 
 const Answers = () => {
-  // const { userAnswers } = useContext(UserAnswersContext);
-  // const router = useRouter();
-  // const { query } = router;
-
-  // console.log(query);
-  // console.log(userAnswers);
 
   return (
     <>

@@ -7,7 +7,13 @@ const UserAnswerCard = () => {
 
     console.log(userAnswers);
 
-  return <div>UserAnswerCard</div>;
+  return (
+    <>
+      {userAnswers.map((item, i) => (
+        <div key={i}> {item.answer} </div>
+      ))}
+    </>
+  );
 };
 
 export default UserAnswerCard;
