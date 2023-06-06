@@ -77,8 +77,11 @@ border-radius: 5px;
   .title {
     font-size: 40px;
   }
-}  
-.answerPage{
-  height: 100%;
-  /* background: linear-gradient(90deg, #d5c5b9,#b9c9d5); */
+} 
+
+.userAnswer{
+  background: linear-gradient(90deg, #fef1d9,#c7e0f3);
+}
+.correctAnswer{
+  background-image: "linear-gradient(90deg, #56FFA4, #59BC86)";
 }

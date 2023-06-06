@@ -42,7 +42,7 @@ const QuestionCard: React.FC<Props> = ({
               )}
             </span>
             <Link href="answers">
-              <button className='show'>Show My Answers</button>
+              <button className='show'>See Your Answers</button>
             </Link>
           </div>
         </Wrapper>

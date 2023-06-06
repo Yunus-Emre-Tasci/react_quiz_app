@@ -6,15 +6,18 @@ flex-wrap: wrap;
 gap: 10px;
 justify-content: center;
 align-items: center;
-padding-top: 40px;
+padding: 40px 0;
 height: 100%;
 /* min-height: 100vh; */
 `
 
 export const Wrapper = styled.div`
-  /* max-width: 1100px; */
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ /* align-items: center; */
   height: 300px;
-  width: 250px;
+  width: 400px;
   background: #ebfeff;
   border-radius: 10px;
   border: 2px solid #0085a3;
@@ -29,7 +32,6 @@ export const Wrapper = styled.div`
 
 type ButtonWrapperProps = {
   correct: boolean;
-  userClicked: boolean;
 };
 
 export const ButtonWrapper = styled.div<ButtonWrapperProps>`
@@ -46,12 +48,10 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
     width: 100%;
     height: 40px;
     margin: 5px 0;
-    background: ${({ correct, userClicked }) =>
+    background: ${({ correct }) =>
       correct
         ? "linear-gradient(90deg, #56FFA4, #59BC86)"
-        : !correct && userClicked
-        ? "linear-gradient(90deg, #FF5656, #C16868)"
-        : "linear-gradient(90deg, #56ccff, #6eafb4)"};
+        : "linear-gradient(90deg, #FF5656, #C16868)"};
     border: 3px solid #ffffff;
     box-shadow: 1px 2px 0px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
