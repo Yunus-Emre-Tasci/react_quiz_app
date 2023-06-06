@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { UserAnswersContext } from "../context/UserAnswersProvider";
+import { ButtonWrapper, Wrapper, Flex } from "./UserAnswerCard.styles";
 
 const UserAnswerCard = () => {
 
@@ -8,11 +9,13 @@ const UserAnswerCard = () => {
     console.log(userAnswers);
 
   return (
-    <>
+    <Flex>
       {userAnswers.map((item, i) => (
-        <div key={i}> {item.answer} </div>
+        <Wrapper key={i}>
+          <div> {i+1} - {item.question} </div>
+        </Wrapper>
       ))}
-    </>
+    </Flex>
   );
 };
 

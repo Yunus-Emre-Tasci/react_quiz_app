@@ -1,7 +1,18 @@
 import styled from "styled-components";
 
+export const Flex=styled.div`
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+justify-content: center;
+align-items: center;
+margin-top: 40px;
+`
+
 export const Wrapper = styled.div`
-  max-width: 1100px;
+  /* max-width: 1100px; */
+  height: 300px;
+  width: 20%;
   background: #ebfeff;
   border-radius: 10px;
   border: 2px solid #0085a3;

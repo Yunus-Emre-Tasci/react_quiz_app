@@ -1,5 +1,4 @@
-import { AnswerObject } from '../type';
-import React from 'react'
+import { AnswerObject } from '../type';       
 import { ButtonWrapper, Wrapper } from './QuestionCard.styles';
 import Link from 'next/link';
 
