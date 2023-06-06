@@ -56,7 +56,8 @@ border-radius: 5px;
   }
 
 .start,
-.next {
+.next,
+.show {
   cursor: pointer;
   background: linear-gradient (180deg, #ffffff,
 #ffcc91);
@@ -77,3 +78,4 @@ border-radius: 5px;
     font-size: 40px;
   }
 }  
+
