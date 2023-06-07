@@ -23,5 +23,9 @@ pnpm dev
 
 
 
-https://github.com/Yunus-Emre-Tasci/react_quiz_app/assets/109620221/7de5033d-2298-4f6b-abb3-55cab079d7bb
+
+
+https://github.com/Yunus-Emre-Tasci/react_quiz_app/assets/109620221/fd948670-61a5-4731-b1ab-f99c5c31fd01
+
+
 
