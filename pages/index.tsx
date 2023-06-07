@@ -121,7 +121,7 @@ const [difficulty, setDifficulty] = useState("easy")
               </button>
             </>
           )}
-          {userAnswers.length === TOTAL_QUESTIONS && (
+          {userAnswers.length === TOTAL_QUESTIONS && !gameOver&&(
             <button className="start" onClick={startTrivia}>
               Restart
             </button>
